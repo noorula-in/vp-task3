@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor-ul-ain - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bg-body: #f3f4f6;
+            --bg-card: #ffffff;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --border-light: #e5e7eb;
+            --accent: #2563eb;
+            --accent-bg: #eff6ff;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 1.6;
+        }
+
+        .cv-wrapper {
+            background-color: var(--bg-card);
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 2px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-light);
+            padding: 60px 80px;
+            box-sizing: border-box;
+        }
+
+        header {
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 35px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .name-section h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            color: var(--text-main);
+        }
+
+        .name-section h1 strong {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .university-title {
+            margin: 8px 0 0 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 30px;
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .contact-item span {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-right: 5px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background-color: var(--border-light);
+        }
+
+        .profile-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-pill {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-light);
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-main);
+            border-radius: 4px;
+        }
+
+        .edu-block {
+            margin-bottom: 50px;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .edu-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .edu-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-bg);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .edu-sub {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--border-light);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .project-header h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .project-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .project-desc {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv-wrapper">
+        <header>
+            <div class="name-section">
+                <h1>Khanzadi <strong>Noor-ul-ain</strong> Waheed Khan</h1>
+                <p class="university-title">Computer Science Student at Air University</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-item"><span>Roll No:</span> 241907</div>
+                <div class="contact-item"><span>Batch:</span> 2024-2028</div>
+                <div class="contact-item"><span>Email:</span> 241907@students.au.edu.pk</div>
+                <div class="contact-item"><span>GitHub:</span> /khanzadi-noor</div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+
+            <aside>
+                <div class="section-title">Profile</div>
+                <p class="profile-text">
+                    Computer Science student passionate about software development, databases, and problem-solving. I
+                    enjoy building functional applications and applying classroom concepts to practical, real-world
+                    projects.
+                </p>
+
+                <div class="section-title">Core Skills</div>
+                <div class="skills-container">
+                    <span class="skill-pill">C++ & Java (OOP)</span>
+                    <span class="skill-pill">Data Structures & Algorithms</span>
+                    <span class="skill-pill">Database Management (SQL)</span>
+                    <span class="skill-pill">Python Programming</span>
+                    <span class="skill-pill">Information Security Basics</span>
+                    <span class="skill-pill">Digital Logic Design</span>
+                </div>
+            </aside>
+
+            <main>
+                <div class="section-title">Education</div>
+                <div class="edu-block">
+                    <div class="edu-header">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <span class="edu-date">Expected 2028</span>
+                    </div>
+                    <div class="edu-sub">Air University, Islamabad</div>
+                    <p style="margin:0; font-size: 0.9rem; color: var(--text-muted);">
+                        Key Coursework: Mobile Computing, Data Structures, OOP, Database Management, and Info Security.
+                    </p>
+                </div>
+
+                <div class="section-title">Academic Projects</div>
+                <div class="projects-list">
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Mobile Chess Game UI</h4>
+                            <span class="project-tag">Mobile Computing</span>
+                        </div>
+                        <p class="project-desc">Developed a mobile chess application focusing on user interface design,
+                            screen navigation, and implementing basic game rules.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Chess Board Logic Engine</h4>
+                            <span class="project-tag">DSA</span>
+                        </div>
+                        <p class="project-desc">Implemented chess board representation and valid move checking using
+                            arrays and basic data structures in C++.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Digital Voting System</h4>
+                            <span class="project-tag">DBMS</span>
+                        </div>
+                        <p class="project-desc">Designed a relational database to store voter and candidate information,
+                            using standard SQL queries to record and count votes securely.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Password Strength Checker</h4>
+                            <span class="project-tag">Info Security</span>
+                        </div>
+                        <p class="project-desc">Created a program that evaluates a user's password based on its length
+                            and character types (numbers, symbols, uppercase) to suggest improvements.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Console Hangman Game</h4>
+                            <span class="project-tag">OOP</span>
+                        </div>
+                        <p class="project-desc">Built a text-based Hangman game using C++/Java, applying core
+                            Object-Oriented concepts like classes, objects, and functions.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Simon Says Logic Simulator</h4>
+                            <span class="project-tag">DLD</span>
+                        </div>
+                        <p class="project-desc">Simulated the hardware logic of the Simon Says game using basic logic
+                            gates and sequential memory circuits.</p>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4>Student Management System</h4>
+                            <span class="project-tag">Fundamental Programming</span>
+                        </div>
+                        <p class="project-desc">Developed a console application in C++ to add, view, update, and delete
+                            student records using simple file handling and arrays.</p>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
